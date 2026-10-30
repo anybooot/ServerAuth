@@ -1,0 +1,30 @@
+# ServerAuth - Maintenance Mode
+# Când enabled = true, nimeni nu intră fără parola corectă (sau OTP)
+
+enabled: true
+
+# Parola principală de mentenanță
+master-password: "changeme123"
+
+# Parole de unică folosință (OTP). Se șterg automat din config după folosire.
+otp-passwords:
+  - "otp-alpha-001"
+  - "otp-beta-002"
+
+# Timeout (secunde) – dacă jucătorul nu introduce parola, e deconectat
+timeout-seconds: 120
+
+messages:
+  kick-wrong: "<red>Parolă greșită. Acces refuzat."
+  kick-timeout: "<red>Timpul de autentificare a expirat."
+  kick-reload: "<red>Sistemul de mentenanță a fost reîncărcat. Reconectează-te."
+  toggle-on: "<green>Mentenanța a fost ACTIVATĂ. Nimeni nu mai intră fără parolă."
+  toggle-off: "<yellow>Mentenanța a fost DEZACTIVATĂ."
+  reload-success: "<green>Configurația a fost reîncărcată."
+  no-permission: "<red>Nu ai permisiune."
+
+dialog:
+  title: "<gold>Server Maintenance"
+  body: "<yellow>Serverul este în mentenanță.\nIntrodu parola pentru a continua."
+  password-label: "Password"
+  button: "Enter"

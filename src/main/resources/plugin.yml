@@ -1,0 +1,15 @@
+name: ServerAuth
+version: '${project.version}'
+main: ro.serverauth.ServerAuthPlugin
+api-version: '1.21'
+author: YourName
+description: Maintenance lock with native Dialog (pre-join)
+commands:
+  serverauth:
+    description: Toggle / reload maintenance auth
+    usage: /serverauth <toggle|reload>
+    permission: serverauth.admin
+permissions:
+  serverauth.admin:
+    description: Access to admin commands
+    default: op
